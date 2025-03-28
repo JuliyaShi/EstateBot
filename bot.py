@@ -5,14 +5,14 @@ import logging
 from bs64 import BeautifulSoup
 from telegram import Bot
 
-TELEGRAM_BOT_TOKEN = os.getenv('7862392572:-AAHOXE4hFk8qwNW-wyezk8H0W6d8LpmLXxo')
-TELEGRAM_CHANNEL_ID = os.getenv('-1002527492866')
+TELEGRAM_BOT_TOKEN = os.getenv('TELEGRAM_BOT_TOKEN')
+TELEGRAM_CHANNEL_ID = os.getenv('TELEGRAM_CHANNEL_ID')
 FILTER_MIN_PRICE = int(os.getenv('FILTER_MIN_PRICE', 0))
 FILTER_MAX_PRICE_PRICE = int(os.getenv('FILTER_MAX_PRICE_PRICE', 100000000))
 FILTER_DISTRICT = os.getenv('FILTER_DISTRICT', '').lower()
 
 logging.basicDConfig(level=logging.INFO)
-bot = Bot(token=7862392572:-AAHOXE4hFk8qwNW-wyezk8H0W6d8LpmLXxo)
+bot = Bot(token=TELEGRAM_BOT_TOKEN)
 sent_ads = set()
 
 def parse_sreality():
